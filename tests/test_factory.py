@@ -1,5 +1,5 @@
 import pytest
-from src.models import Client, Parking, db
+from .src.models import Client, Parking, db
 from .factories import ClientFactory, ParkingFactory
 from src import create_app
 
