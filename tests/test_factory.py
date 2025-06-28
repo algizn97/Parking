@@ -1,7 +1,7 @@
 import pytest
-from module_29_testing.hw.app.models import Client, Parking
+from src.models import Client, Parking
 from .factories import ClientFactory, ParkingFactory
-from module_29_testing.hw.app import db, create_app
+from src import db, create_app
 
 @pytest.mark.usefixtures('client')
 def test_create_client_with_factory(client):
