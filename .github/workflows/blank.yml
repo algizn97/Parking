@@ -33,4 +33,4 @@ jobs:
         run: mypy src/
 
       - name: Run tests
-        run: PYTHONPATH=$(pwd)/src pytest tests
+        run: PYTHONPATH=$(pwd) pytest tests
