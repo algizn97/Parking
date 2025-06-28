@@ -24,7 +24,7 @@ jobs:
         run: black --diff --check src/
 
       - name: Run isort check
-        run: isort --check-only src/
+        run: isort --check-only --profile black src/
 
       - name: Run flake8
         run: flake8 src/
