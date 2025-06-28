@@ -4,9 +4,9 @@ from datetime import datetime, timedelta, timezone
 
 @pytest.fixture(scope='session')
 def app():
-    from module_29_testing.hw.app import create_app
-    from module_29_testing.hw.app import db as _db
-    from module_29_testing.hw.app.models import Client, Parking, ClientParking
+    from src import create_app
+    from src.models import db as _db
+    from src.models import Client, Parking, ClientParking
 
     app = create_app()
     app.config.update({
