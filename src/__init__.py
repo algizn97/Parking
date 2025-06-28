@@ -3,9 +3,11 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
+
 class Config:
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///parking.db'
+    SQLALCHEMY_DATABASE_URI = "sqlite:///parking.db"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+
 
 def create_app():
     app = Flask(__name__)
@@ -19,7 +21,7 @@ def create_app():
         db.create_all()
 
     from .routes import bp
-    app.register_blueprint(bp)
 
+    app.register_blueprint(bp)
 
     return app
