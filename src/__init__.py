@@ -1,7 +1,6 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
 
-db = SQLAlchemy()
+from .models import db
 
 
 class Config:
@@ -15,7 +14,7 @@ def create_app():
 
     db.init_app(app)
 
-    from . import models
+    from . import models  # noqa: F401
 
     with app.app_context():
         db.create_all()
